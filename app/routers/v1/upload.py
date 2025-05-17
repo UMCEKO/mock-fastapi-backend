@@ -1,13 +1,10 @@
 import uuid
-
 from urllib.parse import urlparse, urlunparse
 
-import fastapi
 import magic
 from fastapi import APIRouter, UploadFile, HTTPException, File
 from typing_extensions import Optional
-from magic import Magic
-from fastapi.responses import JSONResponse
+
 from app.core.config import S3_BUCKET, MEDIA_URL
 from app.schemas.base_response import BaseResponse
 from app.schemas.upload import UploadResponse

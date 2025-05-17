@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing_extensions import Mapping, Optional
+from typing_extensions import Optional
 
 
 class ProcessRequest(BaseModel):

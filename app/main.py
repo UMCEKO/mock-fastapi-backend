@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI, HTTPException
+
 from app.core.config import PORT, HOST
 from . import routers
 from .core.exception_handler import custom_http_exception_handler

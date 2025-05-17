@@ -1,6 +1,8 @@
 from fastapi import Request, HTTPException
 from fastapi.responses import JSONResponse
+
 from app.schemas.base_response import BaseResponse
+
 
 async def custom_http_exception_handler(request: Request, exc: Exception):
     if not isinstance(exc, HTTPException):

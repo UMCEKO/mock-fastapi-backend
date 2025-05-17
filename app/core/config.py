@@ -1,6 +1,7 @@
 import os
-import dotenv
 from urllib.parse import urlparse
+
+import dotenv
 
 dotenv.load_dotenv(dotenv_path=".env", override=True)
 
