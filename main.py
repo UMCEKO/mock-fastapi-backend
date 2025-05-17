@@ -1,6 +1,3 @@
-import uvicorn
-from app import app
-from app.core.config import PORT, HOST
+from app.main import main
 
-if __name__ == '__main__':
-    uvicorn.run(app, port=PORT, host=HOST)
+main()
