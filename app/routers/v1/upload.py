@@ -18,7 +18,7 @@ router = APIRouter(prefix="/upload", tags=["Upload"])
 MAX_FILE_SIZE = 10 * 1024 * 1024
 
 @router.post(
-    "",
+    "/",
     response_model=BaseResponse[Optional[UploadResponse]],
     response_description="The pre-signed url of the uploaded file that will last 1 hour.",
     summary = "Upload a PDF file",
