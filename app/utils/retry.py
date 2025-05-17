@@ -1,7 +1,7 @@
 from functools import wraps
 
 
-def retry_async(retry_count=3):
+def retry_async(retry_count: int = 3):
     def decorator(func):
         @wraps(func)
         async def wrapper(*args, **kwargs):
