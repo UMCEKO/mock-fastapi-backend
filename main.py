@@ -1,5 +1,5 @@
 import uvicorn
-from app.app import app
+from app import app
 from app.core.config import PORT, HOST
 
 
