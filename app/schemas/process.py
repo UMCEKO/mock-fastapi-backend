@@ -1,0 +1,24 @@
+from pydantic import BaseModel
+from typing_extensions import Mapping, Optional
+
+
+class ProcessRequest(BaseModel):
+    url: str
+
+
+class Slide(BaseModel):
+    slide: int
+    summary: Optional[str]
+    error: Optional[str]
+
+class Meta(BaseModel):
+    total_files: int
+    slides_processed: int
+    successes: int
+    failures: int
+    time_elapsed: str
+
+
+class ProcessResponse(BaseModel):
+    results: Mapping[str, list[Slide]]
+    meta: Meta
