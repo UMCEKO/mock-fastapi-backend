@@ -20,5 +20,5 @@ class Meta(BaseModel):
 
 
 class ProcessResponse(BaseModel):
-    results: Mapping[str, list[Slide]]
+    results: dict[str, list[Slide]]
     meta: Meta
