@@ -3,7 +3,7 @@ from typing_extensions import Optional
 
 
 class ProcessRequest(BaseModel):
-    url: str
+    urls: list[str]
 
 
 class Slide(BaseModel):
