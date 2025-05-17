@@ -13,11 +13,10 @@ s3_client: S3Client = boto3.client(
     aws_secret_access_key=S3_SECRET_KEY
 )
 
-# Check if the bucket exists and create if it does not.
-
-print("Getting all available s3 buckets.")
-buckets = s3_client.list_buckets()
-if S3_BUCKET not in [b["Name"] for b in buckets["Buckets"]]:
-    print("S3 Bucket not found. Creating it...")
-    s3_client.create_bucket(Bucket=S3_BUCKET)
-    print("Successfully created the S3 bucket.")
+def setup_s3():
+    print("Getting all available s3 buckets.")
+    buckets = s3_client.list_buckets()
+    if S3_BUCKET not in [b["Name"] for b in buckets["Buckets"]]:
+        print("S3 Bucket not found. Creating it...")
+        s3_client.create_bucket(Bucket=S3_BUCKET)
+        print("Successfully created the S3 bucket.")
