@@ -31,7 +31,7 @@ async def upload_pdf(file: UploadFile = File(description="The file to be uploade
         raise HTTPException(status_code=422, detail="Failure to upload the image. The file exceeded the 10MB file size limit.")
 
     mime_type = magic.from_buffer(contents)
-    if not mime_type.startswith("PDF document"):
+    if "pdf" not in mime_type.lower():
         raise HTTPException(status_code=422, detail="The uploaded document is not a pdf file.")
 
     # The file url to be uploaded/accessed
