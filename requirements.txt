@@ -13,6 +13,7 @@ botocore==1.37.3
 botocore-stubs==1.38.17
 certifi==2025.4.26
 click==8.2.0
+colorama==0.4.6
 distro==1.9.0
 fastapi==0.115.12
 frozenlist==1.6.0
